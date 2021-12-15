@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Number Scrolling Preloader In HTML/CSS </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap');
+      *{
+      font-family: 'Duru Sans', sans-serif;
+      }
+      body{
+      background: #CAD5E2;
+      }
+      .content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      }
+      h1{
+      color: #0D0D0D;
+      }
+      #counter{
+      font-size: 150px;
+      color: #758283;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>loading</h1>
+      <div id="counter">0</div>
+    </div>
+    <script>
+      let counters = setInterval(test,40);
+      let x=1;
+      function test() {
+      	if (x==99) {
+      		clearInterval(counters);
+      	}
+      	x++;
+      	document.getElementById('counter').innerHTML=x +"%";
+      
+      }
+    </script>
+  </body>
+</html>
